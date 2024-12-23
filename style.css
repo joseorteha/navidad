@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'mountains_of_christmasregular';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/mountainsofchristmas-webfont.woff2') format('woff2'),
+       url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/mountainsofchristmas-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+background-color:#151522;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center; 
+}
+
+body,
+html {
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+svg {
+width: 90%;
+height: 90%;
+visibility: hidden;
+}
+
+.sparkle {
+/* mix-blend-mode:luminosity */
+}
+
+#endMessage {
+font-family: 'Pacifico', cursive;
+font-size: 2rem;
+text-anchor: middle;
+text-align: center;
+fill: #FFFFFF;
+color: #FFFFFF;
+opacity: 0;
+letter-spacing: 1px;
+}
+
+a {
+color: white;
+text-decoration: underline dotted #FFFFFF;
+}
+
+a:visited {
+color: red;
+}
+
+/* Formulario en la parte superior */
+#nameForm {
+  position: fixed;
+  top: 0; /* Coloca el formulario en la parte superior de la página */
+  left: 50%;
+  transform: translateX(-50%); /* Centrado horizontal */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo más transparente */
+  padding: 20px;
+  width: 100%; /* Hace que el formulario ocupe todo el ancho */
+  box-sizing: border-box; /* Asegura que el padding no se sume al ancho */
+}
+
+/* Input y botón */
+#nameInput {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 80%; /* Hace que el input ocupe el 80% del ancho */
+  max-width: 300px; /* Limita el tamaño máximo del input */
+}
+
+#startButton {
+  padding: 10px 20px;
+  background-color: #446D39;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 80%; /* Hace que el botón ocupe el 80% del ancho */
+  max-width: 300px; /* Limita el tamaño máximo del botón */
+}
+
+/* Ajuste para el contenido (el arbolito, por ejemplo) */
+#content {
+  margin-top: 120px; /* Da espacio para el formulario en la parte superior */
+}
+
+/* Media Queries para hacer que el formulario se vea bien en dispositivos móviles */
+@media (max-width: 768px) {
+  #nameInput, #startButton {
+    width: 90%; /* Aumenta el tamaño del input y botón en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #nameForm {
+    padding: 15px; /* Menos padding en pantallas más pequeñas */
+  }
+  #nameInput, #startButton {
+    width: 90%; /* Aumenta el tamaño del input y botón en pantallas pequeñas */
+  }
+}
